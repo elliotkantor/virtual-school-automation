@@ -4,6 +4,11 @@ Web scraping, zoom automation, etc
 Install python
 Install everything with ```pip install [packagename]```
 Run ```scrapeSchoology.py``` as the main code.
+
+The purpose of main.py is to:
+* Check constantly for the right time
+* If the time is on the spreadsheet, run the right program (either through zoom or my schoology conferences)
+
 ScrapeSchoology does:
 * Signs into schoology
 * Finds zoom info from my physics teacher's post
