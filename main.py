@@ -118,7 +118,7 @@ def economics_login():
     textBox.send_keys('good afternoon')
     textBox.send_keys(Keys.RETURN)
 
-
+    
 def gov_login():
     # materials, zoom conferences, click join
     pass
@@ -263,6 +263,7 @@ while True:
                 journalism_login()
             else:
                 print(current_class + " is not a valid class.")
+
         else:
             print(f"Did not recognize {current_type} as a type.")
 
