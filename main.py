@@ -1,13 +1,6 @@
 #! python3
 # main.py - interactively controls virtual school
 
-
-
-
-# THIS IS A TEST HADKJF
-
-
-
 import pandas as pd
 from datetime import datetime
 import time
