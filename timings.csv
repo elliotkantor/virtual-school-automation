@@ -1,2 +1,7 @@
-timings,meetingid,meetingpswd
-12:32,945 7089 7275,789139
+timings,meetingid,meetingpswd,classname,type,wedtime
+12:32,977 8369 6015,068465,physics,zoom
+11:07,,,gov,zoomEmbed
+10:17,,,computer,zoomEmbed
+13:22,,,calc,zoomEmbed
+14:12,,,econ,schoology
+15:02,,,lit,zoomEmbed
