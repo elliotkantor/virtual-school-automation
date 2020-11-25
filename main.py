@@ -1,5 +1,6 @@
 #! python3
 # main.py - interactively controls virtual school
+
 import pandas as pd
 from datetime import datetime
 import time
@@ -117,6 +118,27 @@ def economics_login():
     textBox.send_keys('good afternoon')
     textBox.send_keys(Keys.RETURN)
 
+    
+def gov_login():
+    # materials, zoom conferences, click join
+    pass
+
+
+def computer_login():
+    # materials, zoom conferences, click join
+    pass
+
+
+def lit_login():
+    # materials, zoom conferences, click join
+    # on wednesday, enter form and save screenshot proof
+    pass
+
+
+def journalism_login():
+    # group resources, zoom conferences, click join
+    pass
+
 
 def changeMeeting(id='', passcode='', course='physics'):
     global time_df
@@ -214,10 +236,11 @@ while True:
         if current_type == 'zoom':
             # gets zoom ID and password with webscraping
             get_zoom_info(current_class)
+
             zoomID = time_df.loc[current_row_index, 'meetingid']
             zoomPass = time_df.loc[current_row_index, 'meetingpswd']
-
             zoom_sign_in(zoomID, zoomPass)
+
             print("Signed in to " + current_class)
             time.sleep(45)
         elif current_type == 'schoology':
@@ -225,17 +248,22 @@ while True:
             openSchoology()
             if current_class == 'economics':
                 economics_login()
-            elif current_class == 'gov':
-                pass
-            elif current_class == 'computer':
-                pass
-            elif current_class == 'lit':
-                pass
             else:
                 print(current_class + " is not a valid class.")
         elif current_type == 'zoomEmbed':
-            print("Should open with zoom from schoology")
-            pass
+            # Should open with zoom from schoology
+            openSchoology()
+            if current_class == 'gov':
+                gov_login()
+            elif current_class == 'computer':
+                computer_login()
+            elif current_class == 'lit':
+                lit_login()
+            elif current_class == 'journalism':
+                journalism_login()
+            else:
+                print(current_class + " is not a valid class.")
+
         else:
             print(f"Did not recognize {current_type} as a type.")
 
